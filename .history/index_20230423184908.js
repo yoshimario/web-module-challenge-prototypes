@@ -54,7 +54,7 @@ console.log(person1.toString()); // "Alice, 50"
         + The `drive` method should return a string "I ran out of fuel at x miles!" x being `odometer`.
 */
 
-function Car(model, milesPerGallon) {
+function Car(model) {
 
 }
 
