@@ -36,7 +36,7 @@ function Person(name,age) {
 }
 const person1 = new Person("Mary", 50);
 
-console.log(person1.toString()); // "Alice, 50"
+console.log(person1.toString()); // "Alice, 30"
 
 /*
   TASK 2

@@ -33,10 +33,21 @@ function Person(name,age) {
   this.toString = function() {
     return this.name + ", " + this.age;
   };
+  const person1 = new Person("Alice", 30);
+  const person2 = new Person("Bob", 40);
+  
+  person1.eat("apple");
+  person1.eat("banana");
+  console.log(person1.stomach); // ["apple", "banana"]
+  
+  person1.poop();
+  console.log(person1.stomach); // []
+  
+  console.log(person1.toString()); // "Alice, 30"
+  console.log(person2.toString()); // "Bob, 40"
 }
-const person1 = new Person("Mary", 50);
 
-console.log(person1.toString()); // "Alice, 50"
+console.log('Task 1', Person("Mary", 50));
 
 /*
   TASK 2

@@ -33,10 +33,9 @@ function Person(name,age) {
   this.toString = function() {
     return this.name + ", " + this.age;
   };
-}
-const person1 = new Person("Mary", 50);
 
-console.log(person1.toString()); // "Alice, 50"
+}
+console
 
 /*
   TASK 2

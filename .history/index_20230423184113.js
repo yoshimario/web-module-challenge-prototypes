@@ -35,8 +35,10 @@ function Person(name,age) {
   };
 }
 const person1 = new Person("Mary", 50);
+person1.eat("apple");
+person1.eat("banana");
+console.log(person1.stomach);
 
-console.log(person1.toString()); // "Alice, 50"
 
 /*
   TASK 2
