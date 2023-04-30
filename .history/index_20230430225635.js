@@ -88,7 +88,10 @@ Baby.prototype.play = function() {
 };
 const baby1 = new Baby("Alice", 1, "Teddy bear");
 baby1.eat("Apple");
+
+
 console.log(baby1.toString()); // "Alice, 1"
+
 console.log(baby1.play()); // "Playing with Teddy bear"
 
 
