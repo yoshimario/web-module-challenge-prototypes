@@ -60,11 +60,24 @@ function Car(model, milesPerGallon) {
   this.milesPerGallon = milesPerGallon;
   this.tank = 0;
   this.odometer = 0;
-}
 
-Car.prototype.fill = function(gallons) {
-  this.tank += gallons;
-};
+  this.fill = function(gallons) {
+    this.tank += gallons;
+  };
+
+  this.drive = function(distance) {
+    const maxDistance = this.tank * this.milesPerGallon;
+
+    if (distance > maxDistance) {
+      this.odometer += maxDistance;
+      this.tank = 0;
+      return "I ran out of fuel at " + this.odometer + " miles!";
+    } else {
+      this.odometer += distance;
+      this.tank -= distance / this.milesPerGallon;
+    }
+  };
+}
 console.log("Car");
 
 /*

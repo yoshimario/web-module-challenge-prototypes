@@ -15,26 +15,25 @@
         + It should return a string with `name` and `age`. Example: "Mary, 50"
 */
 
-function Person(name, age) {
+function Person(name,age) {
   this.name = name;
   this.age = age;
   this.stomach = [];
+
+  this.eat = function(edible) {
+    if (this.stomach.length < 10) {
+      this.stomach.push(edible);
+    }
+  };
+
+  this.poop = function() {
+    this.stomach = [];
+  };
+
+  this.toString = function() {
+    return this.name + ", " + this.age;
+  };
 }
-
-Person.prototype.eat = function(food) {
-  if (this.stomach.length < 10) {
-    this.stomach.push(food);
-  }
-};
-
-Person.prototype.poop = function() {
-  this.stomach = [];
-};
-
-Person.prototype.toString = function() {
-  return this.name + ", " + this.age;
-};
-
 const person1 = new Person("Mary", 50);
 
 console.log(person1.toString()); // "Alice, 50"
@@ -60,11 +59,24 @@ function Car(model, milesPerGallon) {
   this.milesPerGallon = milesPerGallon;
   this.tank = 0;
   this.odometer = 0;
-}
 
-Car.prototype.fill = function(gallons) {
-  this.tank += gallons;
-};
+  this.fill = function(gallons) {
+    this.tank += gallons;
+  };
+
+  this.drive = function(distance) {
+    const maxDistance = this.tank * this.milesPerGallon;
+
+    if (distance > maxDistance) {
+      this.odometer += maxDistance;
+      this.tank = 0;
+      return "I ran out of fuel at " + this.odometer + " miles!";
+    } else {
+      this.odometer += distance;
+      this.tank -= distance / this.milesPerGallon;
+    }
+  };
+}
 console.log("Car");
 
 /*
