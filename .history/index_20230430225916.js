@@ -95,10 +95,10 @@ console.log(baby1.play()); // "Playing with Teddy bear"
 /* 
   TASK 4
   In your own words explain the four principles for the "this" keyword below:
-  1. Implicit binding: If "this" is used inside a method of an object, it refers to the object that the method is called on.    
-  2. Explicit binding: If "this" is used with the "call" or "apply" method, it refers to the object that is passed as the first argument to the method,
-  3. New binding: If "this" is used inside a constructor function, it refers to the new object that is created when the constructor is called.
-  4. Global binding: If "this" is used in the global scope (i.e., outside of any function), it refers to the global object (i.e., "window" in a browser environment, or "global" in Node.js).
+  1. Global 
+  2. 
+  3. 
+  4. 
 */
 
 ///////// END OF CHALLENGE /////////
